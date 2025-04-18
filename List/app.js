@@ -112,6 +112,13 @@ function addItem(event) {
     }
     else if (value && editFlag) {
         console.log('edit item');
+        // edit the item
+        editElement.innerHTML = value;
+        DisplayAlert('value changed', 'success');
+        // set back to default
+        setBackToDefault();
+        // edit local storage
+        // editLocalStorage(editID, value);
 
 
     }
@@ -182,6 +189,7 @@ function editItem(event) {
     editID = element.dataset.id;
     //  change the submit button to edit
     submitbtn.textContent = "edit";
+
 }
 
 
@@ -195,6 +203,9 @@ function removeFromLocalStorage(id) {
     How we get this id  ,now when add item will add data-id to the element so when we click on the delete button we will get the id by dataset from the element and then we will remove it from the local storage
     */
 
+
+}
+function editLocalStorage(id, value) {
 
 }
 
